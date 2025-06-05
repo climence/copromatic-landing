@@ -17,50 +17,46 @@ import {
   GraduationCap,
   GitBranch,
   Package,
+  Play,
+  Download,
 } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/Header"
+import { Footer } from "@/components/Footer"
 
 export default function AccompagnementPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-lavender-mist to-white">
-        <div className="container mx-auto px-4 text-center">
-          <Badge className="mb-6 bg-light-apricot text-blue-zodiac hover:bg-light-apricot font-body">
-            Équipes & Services d'accompagnement
-          </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold text-blue-zodiac mb-6 leading-tight font-heading">
-            Une équipe métier dédiée à <span className="text-aqua-green">votre réussite</span>
-          </h1>
-          <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto font-body">
-            Support expert, migration assistée, formation personnalisée. Découvrez nos équipes spécialisées qui vous
-            accompagnent à chaque étape de votre transformation digitale.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/contact">
-              <Button size="lg" className="bg-aqua-green hover:bg-aqua-green/90 text-white font-bold font-body">
-                <Users className="w-5 h-5 mr-2" />
-                RENCONTRER NOS ÉQUIPES
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-blue-zodiac text-blue-zodiac hover:bg-lavender-mist font-body"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Être rappelé
-              </Button>
-            </Link>
+      <section className="pt-32 pb-12 bg-gradient-to-br from-lavender-mist to-white relative">
+        {/* Background gradient */}
+        <div className="relative h-full bg-gradient-to-br from-slate-50 via-white to-cyan-50/30" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <Badge className="mb-6 bg-orange-100 text-orange-800 hover:bg-orange-100 px-4 py-2 text-sm font-medium">
+              Accompagnement
+            </Badge>
+
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+              Nous accompagnons vos équipes{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500">au quotidien</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Une équipe d'experts à votre service pour vous accompagner dans la mise en place et l'utilisation de nos solutions.
+              Formation, support et conseil personnalisés.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Services Overview */}
-      <section className="py-16 bg-white">
+      <section className="py-16 mt-4 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
             <div className="text-center md:text-left">
@@ -594,83 +590,7 @@ export default function AccompagnementPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-blue-zodiac text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center mb-4">
-                <img src="/images/logo-header.png" alt="Copromatic" className="h-8 w-auto" />
-              </div>
-              <p className="text-gray-300 font-body">La plateforme complète des syndics professionnels</p>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4 font-heading">Solutions</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>
-                  <Link href="/" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    Plateforme métier
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/accompagnement" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    Équipes & Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/formations" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    Formations
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4 font-heading">Ressources</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    Centre d'aide
-                  </a>
-                </li>
-                <li>
-                  <a href="https://swagger.datacopro.org/" target="_blank" rel="noopener noreferrer" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    API Documentation
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://www.welcometothejungle.com/fr/companies/copromatic" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white font-body transition-colors text-lavender-mist"
-                  >
-                    Recrutement
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4 font-heading">Contact</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li className="font-body text-lavender-mist">support@copromatic.com</li>
-                <li className="font-body text-lavender-mist">01 23 45 67 89</li>
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    Politique RGPD
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-            <p className="font-body">&copy; 2024 Copromatic. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 } 

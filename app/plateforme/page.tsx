@@ -23,10 +23,13 @@ import {
   Settings,
   Linkedin,
   Twitter,
+  Play,
+  Download,
 } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import Header from "@/components/Header"
+import { Footer } from "@/components/Footer"
 
 export default function PlateformePage() {
   return (
@@ -98,31 +101,51 @@ export default function PlateformePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-lavender-mist to-white">
-        <div className="container mx-auto px-4 text-center">
-          <Badge className="mb-6 bg-light-apricot text-blue-zodiac hover:bg-light-apricot font-body">
-            Plateforme complète pour syndics professionnels
-          </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold text-blue-zodiac mb-6 leading-tight font-heading">
-            Notre <span className="text-aqua-green">plateforme</span> pour les syndics professionnels
-          </h1>
-          <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto font-body">
-            Découvrez l'écosystème complet Copromatic : une plateforme métier, des logiciels experts et des services
-            dédiés pour faire gagner du temps aux syndics en automatisant les tâches répétitives.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/contact-rdv">
-              <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 bg-mango-tango hover:bg-mango-tango/90 text-white font-body">
-                <ArrowRight />
-                Demander une démo
-              </button>
-            </Link>
+      <section className="relative pt-40 pb-12 bg-gradient-to-br from-lavender-mist to-white">
+        {/* Background gradient */}
+        <div className="relative h-full bg-gradient-to-br from-slate-50 via-white to-cyan-50/30" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <Badge className="mb-3 bg-orange-100 text-orange-800 hover:bg-orange-100 px-4 py-2 text-sm font-medium">
+              Plateforme Copromatic
+            </Badge>
+
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+              Notre plateforme pour les{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500">syndics professionnels</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Découvrez l'écosystème complet Copromatic : une plateforme métier, des logiciels experts et des services dédiés pour faire gagner du temps aux syndics en automatisant les tâches répétitives.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/contact">
+                <Button size="lg" className="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 text-lg">
+                  <Play className="w-5 h-5 mr-2" />
+                  Demandez à voir !
+                </Button>
+              </Link>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 text-lg"
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Télécharger le catalogue
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Fonctionnalités Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 mt-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-blue-zodiac font-heading">Toutes les fonctionnalités dont vous avez besoin</h2>
@@ -307,94 +330,6 @@ export default function PlateformePage() {
               Voir toutes les fonctionnalités
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Qu'est-ce que Copromatic */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-blue-zodiac font-heading">Copromatic, c'est quoi ?</h2>
-            <p className="text-lg text-gray-700 font-body">
-              Une équipe, une entreprise et des outils numériques dédiés exclusivement aux gestionnaires professionnels
-              de copropriété.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-lg text-gray-700 mb-6 font-body">
-                Le logiciel principal Copromatic est conçu pour aider le syndic dans ses tâches liées à la gestion
-                administrative, comptable et réglementaire des copropriétés.
-              </p>
-              <p className="text-lg text-gray-700 mb-6 font-body">
-                En complément, Copromatic s'entoure d'outils spécialisés pour vous permettre de traiter des tâches
-                spécifiques automatiquement sur tout votre portefeuille.
-              </p>
-              <p className="text-lg text-gray-700 mb-6 font-body">
-                Certains de ces outils sont développés directement par nos équipes, d'autres par des partenaires.
-              </p>
-              <div className="bg-lavender-mist/30 p-6 rounded-2xl border-l-4 border-aqua-green">
-                <p className="text-lg font-medium text-blue-zodiac font-body">
-                  Chez Copromatic, notre mission est de faire gagner du temps aux syndics en automatisant un maximum de
-                  tâches répétitives, tout en assurant la conformité légale.
-                </p>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white to-lavender-mist p-6 transition-all duration-300 hover:shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-aqua-green/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-                <div className="relative">
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-aqua-green/10 text-aqua-green transition-transform duration-300 group-hover:scale-110">
-                    <Zap className="h-6 w-6" />
-                  </div>
-                  <h3 className="mb-2 text-lg font-bold text-blue-zodiac font-heading">Automatisation</h3>
-                  <p className="text-sm text-gray-600 font-body">
-                    Automatisez les tâches répétitives pour vous concentrer sur l'essentiel
-                  </p>
-                </div>
-              </div>
-
-              <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white to-lavender-mist p-6 transition-all duration-300 hover:shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-orangey-yellow/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-                <div className="relative">
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orangey-yellow/10 text-orangey-yellow transition-transform duration-300 group-hover:scale-110">
-                    <Lock className="h-6 w-6" />
-                  </div>
-                  <h3 className="mb-2 text-lg font-bold text-blue-zodiac font-heading">Conformité</h3>
-                  <p className="text-sm text-gray-600 font-body">
-                    Assurez la conformité légale de toutes vos opérations
-                  </p>
-                </div>
-              </div>
-
-              <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white to-lavender-mist p-6 transition-all duration-300 hover:shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-mango-tango/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-                <div className="relative">
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-mango-tango/10 text-mango-tango transition-transform duration-300 group-hover:scale-110">
-                    <Database className="h-6 w-6" />
-                  </div>
-                  <h3 className="mb-2 text-lg font-bold text-blue-zodiac font-heading">Données sécurisées</h3>
-                  <p className="text-sm text-gray-600 font-body">
-                    Vos données hébergées et sécurisées dans Datacopro
-                  </p>
-                </div>
-              </div>
-
-              <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white to-lavender-mist p-6 transition-all duration-300 hover:shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-zodiac/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-                <div className="relative">
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-zodiac/10 text-blue-zodiac transition-transform duration-300 group-hover:scale-110">
-                    <Users className="h-6 w-6" />
-                  </div>
-                  <h3 className="mb-2 text-lg font-bold text-blue-zodiac font-heading">Accompagnement</h3>
-                  <p className="text-sm text-gray-600 font-body">
-                    Une équipe dédiée pour vous accompagner au quotidien
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -790,7 +725,7 @@ export default function PlateformePage() {
                   </div>
                 </li>
               </ul>
-              <Link href="/contact-rdv">
+              <Link href="/contact">
                 <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 bg-aqua-green hover:bg-aqua-green/90 text-white font-body">
                   En savoir plus
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -878,7 +813,7 @@ export default function PlateformePage() {
                 besoin, notamment lors d'un changement de mandat où elles doivent être exportées et transmises à un·e
                 confrère·soeur.
               </p>
-              <Link href="/contact-rdv">
+              <Link href="/contact">
                 <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 bg-mango-tango hover:bg-mango-tango/90 text-white font-body">
                   Découvrir l'architecture technique
                   <ArrowRight />
@@ -897,12 +832,12 @@ export default function PlateformePage() {
             Rejoignez les centaines de syndics qui font confiance à Copromatic
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact-rdv">
+            <Link href="/contact">
               <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 bg-mango-tango hover:bg-mango-tango/90 text-white font-body">
                 Demander une démo
               </button>
             </Link>
-            <Link href="/contact-rdv">
+            <Link href="/contact">
               <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 font-body">
                 Être recontacté·e
               </button>
@@ -912,91 +847,7 @@ export default function PlateformePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-blue-zodiac text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-lg font-bold mb-4 font-heading">Copromatic</h3>
-              <p className="text-gray-300 mb-4 font-body">
-                La plateforme complète pour les syndics professionnels
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-300 hover:text-white">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-gray-300 hover:text-white">
-                  <Twitter className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4 font-heading">Solutions</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/plateforme" className="text-gray-300 hover:text-white font-body">
-                    Plateforme
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/solutions" className="text-gray-300 hover:text-white font-body">
-                    Solutions
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/equipes" className="text-gray-300 hover:text-white font-body">
-                    Équipes
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/accompagnement" className="text-gray-300 hover:text-white font-body">
-                    Accompagnement
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4 font-heading">Ressources</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/blog" className="text-gray-300 hover:text-white font-body">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/documentation" className="text-gray-300 hover:text-white font-body">
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/support" className="text-gray-300 hover:text-white font-body">
-                    Support
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4 font-heading">Contact</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/contact" className="text-gray-300 hover:text-white font-body">
-                    Nous contacter
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact-rdv" className="text-gray-300 hover:text-white font-body">
-                    Demander une démo
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-            <p className="text-gray-300 font-body">
-              © {new Date().getFullYear()} Copromatic. Tous droits réservés.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 } 

@@ -11,10 +11,13 @@ import {
   FileText,
   CheckCircle,
   Shield,
+  Play,
+  Download,
 } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import Header from "@/components/Header"
+import { Footer } from "@/components/Footer"
 
 export default function APIPage() {
   return (
@@ -22,47 +25,52 @@ export default function APIPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-lavender-mist to-white">
-        <div className="container mx-auto px-4 text-center">
-          <Badge className="mb-6 bg-light-apricot text-blue-zodiac hover:bg-light-apricot font-body">
-            Documentation technique
-          </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold text-blue-zodiac mb-6 leading-tight font-heading">
-            API <span className="text-aqua-green">Datacopro</span>
-          </h1>
-          <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto font-body">
-            Intégrez l'API Datacopro à vos outils grâce à notre expertise technique. Copromatic, client technique de référence, vous accompagne dans l'intégration de la plateforme.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/contact">
-              <Button
-                size="lg"
-                className="bg-orangey-yellow hover:bg-orangey-yellow/90 text-blue-zodiac font-bold font-body"
+      <section className="relative pt-28 pb-12 bg-gradient-to-br from-lavender-mist to-white">
+        {/* Background gradient */}
+        <div className="relative h-full bg-gradient-to-br from-slate-50 via-white to-cyan-50/30" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <Badge className="mb-3 bg-orange-100 text-orange-800 hover:bg-orange-100 px-4 py-2 text-sm font-medium">
+              API Copromatic
+            </Badge>
+
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-3 leading-tight">
+              Intégrez nos services{" "}
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500">à votre système</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl text-gray-600 mb-6 max-w-3xl mx-auto leading-relaxed">
+              Une API RESTful complète pour intégrer nos services à votre système d'information.
+              Documentation détaillée, exemples de code et support technique.
+            </p>
+
+            {/* CTA Button */}
+            <div className="flex justify-center items-center">
+              <a 
+                href="https://api.copromatic.com/swagger" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors"
               >
-                <Code className="w-5 h-5 mr-2" />
-                DÉMARRER L'INTÉGRATION
-              </Button>
-            </Link>
-            <a href="https://swagger.datacopro.org/" target="_blank" rel="noopener noreferrer">
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-blue-zodiac border-blue-zodiac hover:bg-blue-zodiac hover:text-white transition-all duration-300 font-body group"
-              >
-                <FileText className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
+                <FileText className="w-5 h-5 mr-2" />
                 Documentation
-              </Button>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Architecture & Intégrations */}
-      <section className="py-16 bg-white">
+      <section className="py-16 mt-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
-              <Badge className="mb-4 bg-aqua-green text-white font-body">Architecture</Badge>
+              <Badge className="mb-4 mt-0 bg-aqua-green text-white font-body rounded-full">Architecture</Badge>
               <h2 className="text-3xl font-bold mb-4 text-blue-zodiac font-heading">
                 Une architecture ouverte et évolutive
               </h2>
@@ -348,83 +356,7 @@ const facture = await response.json();`}
       </section>
 
       {/* Footer */}
-      <footer className="bg-blue-zodiac text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center mb-4">
-                <img src="/images/logo-header.png" alt="Copromatic" className="h-8 w-auto" />
-              </div>
-              <p className="text-gray-300 font-body">La plateforme complète des syndics professionnels</p>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4 font-heading">Solutions</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>
-                  <Link href="/" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    Plateforme métier
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/accompagnement" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    Équipes & Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/formations" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    Formations
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4 font-heading">Ressources</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    Centre d'aide
-                  </a>
-                </li>
-                <li>
-                  <a href="https://swagger.datacopro.org/" target="_blank" rel="noopener noreferrer" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    API Documentation
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://www.welcometothejungle.com/fr/companies/copromatic" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white font-body transition-colors text-lavender-mist"
-                  >
-                    Recrutement
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4 font-heading">Contact</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li className="font-body text-lavender-mist">support@copromatic.com</li>
-                <li className="font-body text-lavender-mist">01 23 45 67 89</li>
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors text-lavender-mist">
-                    Politique RGPD
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-            <p className="font-body">&copy; 2024 Copromatic. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 } 

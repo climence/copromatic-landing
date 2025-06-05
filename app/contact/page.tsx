@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Calendar, Clock, Phone, Mail, CheckCircle, ArrowLeft, Video, MessageSquare, Users, Send } from "lucide-react"
+import { Calendar, Clock, Phone, Mail, CheckCircle, ArrowLeft, Video, MessageSquare, Users, Send, Play, Download } from "lucide-react"
 import Link from "next/link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Header from "@/components/Header"
@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { MapPin } from "lucide-react"
+import { Footer } from "@/components/Footer"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -94,6 +95,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     )
   }
@@ -103,17 +105,29 @@ export default function ContactPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-12 bg-gradient-to-br from-lavender-mist to-white">
-        <div className="container mx-auto px-4 text-center">
-          <Badge className="mb-4 bg-light-apricot text-blue-zodiac hover:bg-light-apricot font-body">
-            Contactez-nous
-          </Badge>
-          <h1 className="text-4xl font-bold text-blue-zodiac mb-4 leading-tight font-heading">
-            Parlons de votre projet
-          </h1>
-          <p className="text-lg text-gray-700 mb-6 max-w-2xl mx-auto font-body">
-            Notre équipe est là pour vous accompagner dans votre transformation digitale
-          </p>
+      <section className="pt-32 pb-20 bg-gradient-to-br from-lavender-mist to-white relative">
+        {/* Background gradient */}
+        <div className="relative h-full bg-gradient-to-br from-slate-50 via-white to-cyan-50/30" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <Badge className="mb-6 bg-orange-100 text-orange-800 hover:bg-orange-100 px-4 py-2 text-sm font-medium">
+              Contact
+            </Badge>
+
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+              Parlons de votre{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500">projet</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans votre projet.
+              N'hésitez pas à nous contacter.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -377,6 +391,7 @@ export default function ContactPage() {
           </Tabs>
         </div>
       </section>
+      <Footer />
     </div>
   )
 } 

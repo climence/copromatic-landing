@@ -28,45 +28,57 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/Header"
+import { Footer } from "@/components/Footer"
 
 export default function AcademiePage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-light-apricot/30 to-lavender-mist">
-        <div className="container mx-auto px-4 text-center">
-          <Badge className="mb-6 bg-light-apricot text-blue-zodiac hover:bg-light-apricot font-body">
-            Académie Copromatic
-          </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold text-blue-zodiac mb-6 leading-tight font-heading">
-            Formez vos équipes <span className="text-aqua-green">efficacement</span>
-          </h1>
-          <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto font-body">
-            Une plateforme complète pour accompagner vos nouveaux collaborateurs et développer les compétences de vos équipes.
-            Des parcours personnalisés, une communauté active et des contenus enrichis.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/contact">
-              <Button size="lg" className="bg-aqua-green hover:bg-aqua-green/90 text-white font-bold font-body">
+      <section className="pt-32 pb-12 bg-gradient-to-br from-lavender-mist to-white">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-cyan-50/30" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <Badge className="mb-6 bg-orange-100 text-orange-800 hover:bg-orange-100 px-4 py-2 text-sm font-medium">
+              Académie Copromatic
+            </Badge>
+
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+              Formez vos équipes{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500">efficacement</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Une plateforme complète pour accompagner vos nouveaux collaborateurs et développer les compétences de vos équipes.
+              Des parcours personnalisés, une communauté active et des contenus enrichis.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" className="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 text-lg">
                 <Play className="w-5 h-5 mr-2" />
                 DÉCOUVRIR LA PLATEFORME
               </Button>
-            </Link>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-blue-zodiac text-blue-zodiac hover:bg-lavender-mist font-body"
-            >
-              <Download className="w-5 h-5 mr-2" />
-              Télécharger le catalogue
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 text-lg"
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Télécharger le catalogue
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 mt-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
@@ -462,73 +474,7 @@ export default function AcademiePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-blue-zodiac text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center mb-4">
-                <img src="/images/logo-header.png" alt="Copromatic" className="h-8 w-auto" />
-              </div>
-              <p className="text-gray-300 font-body">La plateforme complète des syndics professionnels</p>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4 font-heading">Solutions</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>
-                  <Link href="/" className="hover:text-white font-body transition-colors">
-                    Plateforme métier
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/accompagnement" className="hover:text-white font-body transition-colors">
-                    Équipes & Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/academie" className="hover:text-white font-body transition-colors">
-                    Formations
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4 font-heading">Ressources</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors">
-                    Centre d'aide
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors">
-                    API Documentation
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors">
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4 font-heading">Contact</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li className="font-body">support@copromatic.com</li>
-                <li className="font-body">01 23 45 67 89</li>
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors">
-                    Politique RGPD
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-            <p className="font-body">&copy; 2024 Copromatic. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 } 

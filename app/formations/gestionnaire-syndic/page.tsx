@@ -21,49 +21,12 @@ import {
   Home,
 } from "lucide-react"
 import Link from "next/link"
+import Header from "@/components/Header"
 
 export default function GestionnaireSyndicPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center">
-            <img src="/images/logo-header.png" alt="Copromatic" className="h-8 w-auto" />
-          </Link>
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-blue-zodiac font-body transition-colors">
-              Accueil
-            </Link>
-            <Link href="/solutions" className="text-gray-600 hover:text-blue-zodiac font-body transition-colors">
-              Solutions
-            </Link>
-            <Link href="/formations" className="text-blue-zodiac font-body font-medium">
-              Formations
-            </Link>
-            <Link href="/equipes" className="text-gray-600 hover:text-blue-zodiac font-body transition-colors">
-              Équipes
-            </Link>
-            <Link href="/contact-rdv" className="text-gray-600 hover:text-blue-zodiac font-body transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center space-x-3">
-            <Button
-              variant="outline"
-              size="sm"
-              className="border-blue-zodiac text-blue-zodiac hover:bg-lavender-mist font-body"
-            >
-              Connexion
-            </Button>
-            <Link href="/contact-rdv">
-              <Button size="sm" className="bg-blue-zodiac hover:bg-blue-zodiac/90 font-body">
-                S'inscrire
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Breadcrumb */}
       <section className="py-4 bg-lavender-mist/20">

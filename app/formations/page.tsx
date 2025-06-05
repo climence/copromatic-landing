@@ -17,6 +17,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/Header"
+import { Footer } from "@/components/Footer"
 
 export default function FormationsPage() {
   return (
@@ -374,73 +375,7 @@ export default function FormationsPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-blue-zodiac text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center mb-4">
-                <img src="/images/logo-header.png" alt="Copromatic" className="h-8 w-auto" />
-              </div>
-              <p className="text-gray-300 font-body">La plateforme complète des syndics professionnels</p>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4 font-heading">Solutions</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>
-                  <Link href="/" className="hover:text-white font-body transition-colors">
-                    Plateforme métier
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/equipes" className="hover:text-white font-body transition-colors">
-                    Équipes & Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/formations" className="hover:text-white font-body transition-colors">
-                    Formations
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4 font-heading">Ressources</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors">
-                    Centre d'aide
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors">
-                    API Documentation
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors">
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4 font-heading">Contact</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li className="font-body">support@copromatic.com</li>
-                <li className="font-body">01 23 45 67 89</li>
-                <li>
-                  <a href="#" className="hover:text-white font-body transition-colors">
-                    Politique RGPD
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-            <p className="font-body">&copy; 2024 Copromatic. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
