@@ -38,16 +38,24 @@ export default function HomePage() {
 
   const faqItems = [
     {
+      question: "Quels sont les avantages de Copromatic par rapport aux autres solutions ?",
+      answer: "Copromatic se distingue par son approche complète : une plateforme métier puissante, un accompagnement humain personnalisé et une académie de formation continue. Notre solution est conçue spécifiquement pour les syndics professionnels, avec une automatisation poussée des tâches répétitives et une conformité légale garantie."
+    },
+    {
       question: "Comment se déroule la migration vers Copromatic ?",
-      answer: "La migration vers Copromatic est un processus structuré en 4 étapes : audit de vos données, configuration de votre espace, import de vos données et formation de vos équipes. Notre équipe dédiée vous accompagne à chaque étape pour garantir une transition en douceur."
+      answer: "La migration est un processus structuré en 4 étapes : audit de vos données, configuration de votre espace, import de vos données et formation de vos équipes. Notre équipe dédiée vous accompagne à chaque étape pour garantir une transition en douceur, avec un suivi personnalisé et des points réguliers."
     },
     {
       question: "Quels sont les délais de mise en place ?",
-      answer: "La mise en place de Copromatic prend généralement 3 à 4 semaines, selon la taille de votre cabinet et la complexité de vos données. Nous commençons par un audit approfondi, suivi d'une configuration personnalisée et d'une formation complète de vos équipes."
+      answer: "La mise en place prend généralement 3 à 4 semaines, selon la taille de votre cabinet et la complexité de vos données. Nous commençons par un audit approfondi, suivi d'une configuration personnalisée et d'une formation complète de vos équipes. Notre objectif est de vous faire gagner du temps dès le premier jour."
     },
     {
       question: "Comment sont formées mes équipes ?",
-      answer: "Nous proposons un parcours de formation complet via notre Académie : formations en ligne, sessions en présentiel, quiz d'évaluation et support continu. Chaque membre de votre équipe bénéficie d'un parcours personnalisé selon son rôle et son niveau d'expertise."
+      answer: "Nous proposons un parcours de formation complet via notre Académie : formations en ligne, sessions en présentiel, quiz d'évaluation et support continu. Chaque membre de votre équipe bénéficie d'un parcours personnalisé selon son rôle et son niveau d'expertise, avec un suivi de progression."
+    },
+    {
+      question: "Quel est le niveau de sécurité de vos solutions ?",
+      answer: "La sécurité est notre priorité. Nos solutions sont hébergées en France, conformes au RGPD, avec des sauvegardes régulières et un chiffrement des données. Nous proposons également des fonctionnalités de signature électronique et de coffre-fort numérique pour une gestion sécurisée de vos documents."
     }
   ]
 
