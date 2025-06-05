@@ -655,7 +655,7 @@ const syndics = await response.json();`}
             </Badge>
             <h2 className="text-3xl font-bold mb-4 text-blue-zodiac font-heading">Questions Fréquentes</h2>
           </div>
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             {faqItems.map((item, index) => (
               <div key={index} className="border-b border-gray-300">
                 <div 
