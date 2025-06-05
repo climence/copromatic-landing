@@ -38,20 +38,20 @@ export default function HomePage() {
 
   const faqItems = [
     {
-      question: "Quels sont les avantages de Copromatic par rapport aux autres solutions ?",
-      answer: "Copromatic se distingue par son approche complète : une plateforme métier puissante, un accompagnement humain personnalisé et une académie de formation continue. Notre solution est conçue spécifiquement pour les syndics professionnels, avec une automatisation poussée des tâches répétitives et une conformité légale garantie."
+      question: "À qui s'adresse Copromatic ?",
+      answer: "Aux syndics professionnels, aux gestionnaires indépendants, aux cabinets en croissance, et à toutes les structures qui souhaitent moderniser leur organisation sans complexifier leur quotidien."
     },
     {
-      question: "Comment se déroule la migration vers Copromatic ?",
-      answer: "La migration est un processus structuré en 4 étapes : audit de vos données, configuration de votre espace, import de vos données et formation de vos équipes. Notre équipe dédiée vous accompagne à chaque étape pour garantir une transition en douceur, avec un suivi personnalisé et des points réguliers."
+      question: "Peut-on impliquer les conseils syndicaux via la plateforme ?",
+      answer: "Oui. Les conseils syndicaux peuvent accéder à un extranet dédié, leur permettant de suivre les données comptables, les documents importants, tout en gardant un historique clair."
     },
     {
-      question: "Quels sont les délais de mise en place ?",
-      answer: "La mise en place prend généralement 3 à 4 semaines, selon la taille de votre cabinet et la complexité de vos données. Nous commençons par un audit approfondi, suivi d'une configuration personnalisée et d'une formation complète de vos équipes. Notre objectif est de vous faire gagner du temps dès le premier jour."
+      question: "Et en cas de question, quel support est proposé ?",
+      answer: "Copromatic met à votre disposition un accompagnement complet et basé en France, via plusieurs canaux : hotline téléphonique pour une assistance directe, support par email pour les demandes plus détaillées, et chat intégré à la plateforme pour des réponses rapides et efficaces. En complément, une base de connaissance en ligne est accessible 24h/24, avec des articles, guides pratiques et procédures pas à pas. Notre académie propose également des parcours de formation thématiques (assemblées générales, relances, carnet d'entretien…), en e-learning ou en sessions live."
     },
     {
-      question: "Comment sont formées mes équipes ?",
-      answer: "Nous proposons un parcours de formation complet via notre Académie : formations en ligne, sessions en présentiel, quiz d'évaluation et support continu. Chaque membre de votre équipe bénéficie d'un parcours personnalisé selon son rôle et son niveau d'expertise, avec un suivi de progression."
+      question: "Est-ce que la migration depuis un autre logiciel est compliquée ?",
+      answer: "Non. Nous avons mis en place un accompagnement personnalisé à la migration, avec récupération des données essentielles et limitation des ressaisies. C'est une priorité, car nous savons que la migration est l'un des principaux freins identifiés par les gestionnaires."
     },
     {
       question: "Quel est le niveau de sécurité de vos solutions ?",
